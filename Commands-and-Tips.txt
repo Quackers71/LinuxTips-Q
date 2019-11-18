@@ -1,0 +1,25 @@
+## Linux Commands and Tips
+
+Resources :
+https://www.networkworld.com/article/3221415/linux-commands-for-managing-partitioning-troubleshooting.html
+https://www.youtube.com/playlist?list=PL7D2RMSmRO9J8OTpjFECi8DJiTQdd4hua  - 2 minute Linux tips
+https://unix.stackexchange.com/questions/189432/how-to-mount-sdb-directly-or-using-lvm-partitions-on-sda
+https://www.howtoforge.com/linux_lvm
+
+
+df -h                     - will list the disk filesystem, -h will list this in a "human-friendly" format
+
+lsblk                     - provides 7 fields of information regarding block devices (hdd or ssd)
+lsblk -o name, rota       - ROTA field shows whether the block device is rotational i.e. 1 = hdd, 0 = ssd
+
+fdisk /dev/sda            - start fdisk interactively and then type m to see a list of the things that you can do with the fdisk command.
+fdisk -l                  - This lists the filesystem partitions
+
+parted -l                 - This command displays partition information in a different format
+
+pvscan                    - Primary /dev/sda2 system lvm2 < 49.51 GiB
+pvdisplay                 - Displays the Physical Volume
+lvscan                    - List of Primary Partitions within the above - /dev/sda2
+
+cat /proc/partitions      - Lists all the Partitions
+
