@@ -23,3 +23,22 @@ sda      8:0    0 465.8G  0 disk
 ├─sda6   8:6    0    15G  0 part /media/robq/LENOVO
 ├─sda7   8:7    0  15.2G  0 part 
 └─sda8   8:8    0    10G  0 part /
+
+# added from fdisk -l
+Command (m for help): p
+Disk /dev/sda: 465.8 GiB, 500107862016 bytes, 976773168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: F6444C0F-A130-426D-8076-313F1595E6A4
+
+Device         Start       End   Sectors   Size Type
+/dev/sda1       2048   2050047   2048000  1000M Windows recovery environment
+/dev/sda2    2050048   2582527    532480   260M EFI System
+/dev/sda3    2582528   4630527   2048000  1000M Lenovo boot partition
+/dev/sda4    4630528   4892671    262144   128M Microsoft reserved
+/dev/sda5    4892672 892467199 887574528 423.2G Microsoft basic data
+/dev/sda6  892467200 923924479  31457280    15G Microsoft basic data
+/dev/sda7  944896000 976773119  31877120  15.2G Windows recovery environment
+/dev/sda8  923924480 944895999  20971520    10G Linux filesystem
